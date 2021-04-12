@@ -1,0 +1,13 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}{{ blog.title }} | Nick Dawson{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <h1 class="font-weight-normal" style="font-size: 6rem">{{ blog.title }}</h1>
+        <h4 class="text-secondary mt-3">{{ blog.date | date:'l, F jS, Y' }}</h4>
+    </div>
+    <hr>
+    {# safe will allow html styling #}
+    <div>{{ blog.content | safe }}</div>
+{% endblock %}
